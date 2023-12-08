@@ -2,11 +2,20 @@ class Card {
     private String suit;
     private String rank;
 
+    /**
+     * 
+     * @param suit
+     * @param rank
+     */
     public Card(String suit, String rank) {
         this.suit = suit;
         this.rank = rank;
     }
 
+    /**
+     * 
+     * @return
+     */
     public String getSuit() {
         return suit;
     }
