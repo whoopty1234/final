@@ -45,6 +45,12 @@ class BlackjackGame {
         displayResult();
     }
     // method to calculate the value of a hand
+
+    /**
+     * 
+     * @param hand 
+     * @return
+     */
     private int calculateHandValue(List<Card> hand) {
         int value = 0;
         int numAces = 0;
