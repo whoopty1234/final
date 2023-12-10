@@ -2,6 +2,10 @@ class Card {
     private String suit;
     private String rank;
 
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_BLACK = "\u001B[30m";
+
     /**
      * Constructor for creating a new Card object.
      * @param suit The suit of the card (e.g., "Hearts", "Diamonds", "Clubs", "Spades").
@@ -31,7 +35,8 @@ class Card {
      * @return A string in the format "Rank of Suit", e.g., "Ace of Spades".
      */
     public String toString() {
-        return rank + " of " + suit;
+        String cardColor = (suit.equals("Hearts") || suit.equals("Diamonds")) ? ANSI_RED : ANSI_BLACK;
+        return cardColor + rank + " of " + suit + ANSI_RESET;
     }
 
     
